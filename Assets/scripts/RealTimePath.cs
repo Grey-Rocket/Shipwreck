@@ -10,13 +10,13 @@ public class RealTimePath : MonoBehaviour {
     public Tile nRTile;
     public Tile rRTile;
 
+    public Tile ship;
     public Tile arrow;
     public Tile horizontal;
     public Tile vertical;
 
-    public Transform player;
-
     public Tilemap arrowTiles;
+    public Tilemap shipTiles;
 
     private Vector3Int startPos;
     private Vector3Int holder;
@@ -24,8 +24,6 @@ public class RealTimePath : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Debug.Log(player.position);
-        //Debug.Log(new Vector3Int(player.position.x, player.position.y, 0));
         startPos = new Vector3Int(0, 0, 0);
         holder = new Vector3Int(0, 0, 0);
         clicked = false;
@@ -35,7 +33,7 @@ public class RealTimePath : MonoBehaviour {
 	void Update () {
         Vector3Int temp = new Vector3Int(Mathf.FloorToInt(Camera.main.ScreenToWorldPoint(Input.mousePosition).x),
           Mathf.FloorToInt(Camera.main.ScreenToWorldPoint(Input.mousePosition).y), 0);
-        Debug.Log(temp);
+
         if (Input.GetMouseButtonDown(0))
         {
             if (!clicked && temp == startPos)
@@ -44,9 +42,9 @@ public class RealTimePath : MonoBehaviour {
             }
             else if (clicked)
             {
-                //playerTiles.SetTile(startPos, null);
+                shipTiles.SetTile(startPos, null);
                 arrowTiles.ClearAllTiles();
-                //playerTiles.SetTile(temp, player);
+                shipTiles.SetTile(temp, ship);
 
                 clicked = false;
 
