@@ -14,6 +14,8 @@ public class EventLoader : MonoBehaviour
     {
         eventText.text = "In the eye.In the eye.In the eye.In the eye.In the eye.In the eye." +
             "In the eye.In the eye.In the eye.In the eye.In the eye.In the eye.";
+
+    
     }
 
     // Update is called once per frame
