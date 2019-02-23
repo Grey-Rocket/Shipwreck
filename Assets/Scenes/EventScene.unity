@@ -997,6 +997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventText: {fileID: 755275705}
   eventCanvas: {fileID: 841629429}
+  currentEvent: {fileID: 11400000, guid: 0a659bbe8a2dab2469ebed4d4e52759c, type: 2}
 --- !u!4 &1793844362
 Transform:
   m_ObjectHideFlags: 0

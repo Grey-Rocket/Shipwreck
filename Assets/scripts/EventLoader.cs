@@ -8,13 +8,12 @@ public class EventLoader : MonoBehaviour
 
     public Text eventText;
     public Canvas eventCanvas;
+    public Event currentEvent;
 
     // Start is called before the first frame update
     void Start()
     {
-        eventText.text = "In the eye.In the eye.In the eye.In the eye.In the eye.In the eye." +
-            "In the eye.In the eye.In the eye.In the eye.In the eye.In the eye.";
-
+        eventText.text = currentEvent.text;
     
     }
 
