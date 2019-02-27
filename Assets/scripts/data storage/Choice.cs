@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Choice : MonoBehaviour
+[System.Serializable]
+public class Choice
 {
     public string choiceText;
 
     public Change[] changes;
+
 
 }

@@ -8,7 +8,7 @@ public class Event : ScriptableObject
 
     public string text;
 
-    public string[] choices;
+    public Choice[] choices;
 
     public Event[] followingEvents;
 }
